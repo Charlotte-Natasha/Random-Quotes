@@ -22,4 +22,10 @@ saveQuote(){
   console.log(this.randomQuotes.value);
 }
 
+title = 'stopwatch';
+
+ms: any = '0' + 0;
+sec: any = '0' + 0;
+min: any = '0' + 0;
+hr: any = '0' + 0;
 }
