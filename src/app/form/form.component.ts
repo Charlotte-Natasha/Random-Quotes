@@ -18,4 +18,8 @@ randomQuotes !: FormGroup;
     })
   }
 
+saveQuote(){
+  console.log(this.randomQuotes.value);
+}
+
 }
