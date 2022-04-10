@@ -18,13 +18,15 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatBadgeModule} from '@angular/material/badge';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
-    FormComponent
+    FormComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

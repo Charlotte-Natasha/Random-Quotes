@@ -23,13 +23,13 @@ randomQuotes !: FormGroup;
     console.log(this.randomQuotes);
   }
 
-  
+  quote: Quote[] = [
+    new Quote ("", "", "", new Date(), 0, 0)
+  ]
+
+
+
   //newQuote = new Quote =("", "", "", new Date(), 0, 0)
 
-title = 'stopwatch';
 
-ms: any = '0' + 0;
-sec: any = '0' + 0;
-min: any = '0' + 0;
-hr: any = '0' + 0;
 }

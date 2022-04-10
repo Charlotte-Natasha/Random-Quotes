@@ -13,7 +13,10 @@
       </p>
 
 <!--Quote template-->
-<div class="row container" fxLayoutGap *ngFor="let word of words index as i">
+<div class="container box" >
+  <div class="row"  > 
+    <div class="col-md-4" *ngFor="let word of words index as i">
+
       <mat-card class="example-card">
         <mat-card-subtitle>Quote</mat-card-subtitle>
         
@@ -22,63 +25,31 @@
                {{word.content }}
           </p>
          <p> {{word.author}} </p>
+         <p> {{word.name}} </p>
+
+         <p> {{word.date}} </p>
+         
+         <p> {{numberOfVotes}} </p>
+         <p> {{numberOfDislikes}} </p>
           
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
-          <button mat-raised-button matBadge="0" color="primary" >DOWNVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary"(click)="upVoteClick()">UPVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" (click)="downVoteClick()">DOWNVOTE</button>
           <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
           </button>
          
-        </mat-card-actions>
-        <mat-card-footer>
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
-      </mat-card>
-<!--
-      <mat-card class="example-card">
-        <mat-card-subtitle>Quote</mat-card-subtitle>
-        
-        
-        <mat-card-content>
-         
-          
-        </mat-card-content>
-        <mat-divider inset></mat-divider>
-        <mat-card-actions>
-          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
-          <button mat-raised-button matBadge="0" color="primary" >DOWNVOTE</button>
-          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-            <mat-icon>delete</mat-icon>
-          </button>
         </mat-card-actions>
         <mat-card-footer>
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>
       </mat-card>
 
-      <mat-card class="example-card">
-        <mat-card-subtitle>Quote</mat-card-subtitle>
-        
-        <mat-card-content>
-         
-         
-          
-          
-        </mat-card-content>
-        <mat-divider inset></mat-divider>
-        <mat-card-actions>
-          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
-          <button mat-raised-button matBadge="0"color="primary" >DOWNVOTE</button>
-          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </mat-card-actions>
-        <mat-card-footer>
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
-      </mat-card>-->
+    </div>
+  </div>
+      
+
     </div>
   

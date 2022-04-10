@@ -16,8 +16,6 @@ export class Quote {
         this.date = date,
         this.upVote = upVote,
         this.downVote = downVote
-
-    
     
     }
 
