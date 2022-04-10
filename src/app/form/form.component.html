@@ -1,10 +1,11 @@
 <h1 mat-dialog-title>Write your favorite quotes</h1>
 <div mat-form-field>
-<form [formGroup]="randomQuotes">
+<form [formGroup]="randomQuotes" #form="ngForm" >
     <p>
         <mat-form-field appearance="outline">
-          <mat-label>Your quote here</mat-label>
-          <input formControlName="randomQuotes"  matInput placeholder="Quotes">
+          <mat-label >Your quote here</mat-label>
+          <input formControlName="randomQuotes"  matInput placeholder="Quotes"> 
+          
           <mat-hint>Quote</mat-hint>
         </mat-form-field>
       </p>
@@ -25,9 +26,16 @@
 </form>
 </div>
 <div mat-dialog-actions [align]="'end'">
-<button mat-raised-button color="accent" (click)="saveQuote()">Save</button>
+<button mat-raised-button color="accent" >Save</button>
 <button mat-raised-button color="primary" mat-dialog-close>Close</button>
 </div>
+
+
+
+
+
+
+
 <div class="stopwatch">
     <span> {{hr}} </span>
     <span> {{min}} </span>

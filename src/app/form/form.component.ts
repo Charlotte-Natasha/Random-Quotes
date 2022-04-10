@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Quote } from 'src/app/quote';
+
+
 
 @Component({
   selector: 'app-form',
@@ -7,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+
 randomQuotes !: FormGroup;
   constructor(private formBuilder : FormBuilder) { }
 
@@ -16,11 +20,11 @@ randomQuotes !: FormGroup;
       author : ['', Validators.required],
       yourName :['', Validators.required]
     })
+    console.log(this.randomQuotes);
   }
 
-saveQuote(){
-  console.log(this.randomQuotes.value);
-}
+  
+  //newQuote = new Quote =("", "", "", new Date(), 0, 0)
 
 title = 'stopwatch';
 

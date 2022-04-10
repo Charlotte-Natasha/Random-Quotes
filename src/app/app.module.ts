@@ -17,6 +17,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatDividerModule,
     MatProgressBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

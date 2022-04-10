@@ -1,5 +1,4 @@
- 
- <p>
+  <p>
         <mat-toolbar color="primary">
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
              <mat-icon>grade</mat-icon>
@@ -13,20 +12,22 @@
         </mat-toolbar>
       </p>
 
-
-<div class="row container" fxLayoutGap>
+<!--Quote template-->
+<div class="row container" fxLayoutGap *ngFor="let word of words index as i">
       <mat-card class="example-card">
         <mat-card-subtitle>Quote</mat-card-subtitle>
         
-        <mat-card-content>
-          <p>This card has divider and indeterminate progress as footer</p>
-         
+        <mat-card-content >
+          <p> 
+               {{word.content }}
+          </p>
+         <p> {{word.author}} </p>
           
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-raised-button color="primary">UPVOTE</button>
-          <button mat-raised-button color="primary">DOWNVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" >DOWNVOTE</button>
           <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
           </button>
@@ -36,20 +37,19 @@
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>
       </mat-card>
-
+<!--
       <mat-card class="example-card">
         <mat-card-subtitle>Quote</mat-card-subtitle>
         
         
         <mat-card-content>
-          <p>This card has divider and indeterminate progress as footer</p>
-          
+         
           
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-raised-button color="primary">UPVOTE</button>
-          <button mat-raised-button color="primary">DOWNVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" >DOWNVOTE</button>
           <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
           </button>
@@ -63,13 +63,15 @@
         <mat-card-subtitle>Quote</mat-card-subtitle>
         
         <mat-card-content>
-          <p>This card has divider and indeterminate progress as footer</p>
+         
+         
+          
           
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-raised-button color="primary">UPVOTE</button>
-          <button mat-raised-button color="primary">DOWNVOTE</button>
+          <button mat-raised-button matBadge="0" color="primary" >UPVOTE</button>
+          <button mat-raised-button matBadge="0"color="primary" >DOWNVOTE</button>
           <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
           </button>
@@ -77,6 +79,6 @@
         <mat-card-footer>
           <mat-progress-bar mode="indeterminate"></mat-progress-bar>
         </mat-card-footer>
-      </mat-card>
+      </mat-card>-->
     </div>
   
