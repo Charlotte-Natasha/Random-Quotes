@@ -1,6 +1,7 @@
 # RandomQuotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project![Quotes](https://user-images.githubusercontent.com/88707616/162642138-634778cc-205d-4967-a29b-76ac3b337d93.png)
+ was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 
 
