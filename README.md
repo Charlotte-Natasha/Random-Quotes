@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+
+
 ## Developed By
 
 Charlotte Natasha
@@ -10,11 +12,17 @@ Charlotte Natasha
 ## Applications Used
 
 Angular Materials
+
 HTML
+
 CSS
+
 Typescript
+
 db.json
+
 Youtube
+
 Angular Docs
 
 ## Build
@@ -35,5 +43,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## License
 
-MIT License.md 
+MIT [License.md] 
+Copyright (c) 2022 Charlotte Natasha
 
