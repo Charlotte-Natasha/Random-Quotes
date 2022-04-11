@@ -12,6 +12,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   #words{
-    color: pink;
+    color: #afbec6;
   }
-  
+body{
+  background: pink;
+}

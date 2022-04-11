@@ -1,32 +1,37 @@
-<h1 mat-dialog-title>Write your favorite quotes</h1>
-<div mat-form-field>
+<h1 mat-dialog-title class="text-center">Write your favorite quotes</h1>
+<div mat-form-field class="form-quote" class="text-center">
 <form [formGroup]="randomQuotes" (ngSubmit)="getInput()" >
     <p>
         <mat-form-field appearance="outline">
-          <mat-label >Your quote here</mat-label>
-          <input formControlName="randomQuotes"  matInput placeholder="Quotes"> 
-          
           <mat-hint>Quote</mat-hint>
+          <mat-label >Your quote here</mat-label>
+          <input formControlName="randomQuotes"  matInput placeholder="Quotes" > 
+          
+         
         </mat-form-field>
       </p>
       <p>
+        
         <mat-form-field appearance="legacy">
+          <mat-hint>Author</mat-hint>
           <mat-label>Author</mat-label>
           <input formControlName="author" matInput placeholder="Placeholder">
-          <mat-hint>Name</mat-hint>
+         
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="legacy">
+          <mat-hint>Name</mat-hint>
           <mat-label>Your name here..</mat-label>
           <input formControlName="yourName" matInput placeholder="Placeholder">
-          <mat-hint>Name</mat-hint>
+          
         </mat-form-field>
       </p>
+      <div mat-dialog-actions [align]="'center'">
+        <button mat-raised-button color="accent" (ngSubmit)="getInput()" >Save</button> 
+        <button mat-raised-button color="primary" mat-dialog-close>Close</button> <br> <br>
+        </div>
 </form>
-<div mat-dialog-actions [align]="'end'">
-  <button mat-raised-button color="accent" (click)="getInput()" >Save</button>
-  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
-  </div>
+
 </div>
 
