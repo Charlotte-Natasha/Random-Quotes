@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Write your favorite quotes</h1>
 <div mat-form-field>
-<form [formGroup]="randomQuotes" #form="ngForm" >
+<form [formGroup]="randomQuotes" (ngSubmit)="getInput()" >
     <p>
         <mat-form-field appearance="outline">
           <mat-label >Your quote here</mat-label>
@@ -24,8 +24,9 @@
         </mat-form-field>
       </p>
 </form>
-</div>
 <div mat-dialog-actions [align]="'end'">
-<button mat-raised-button color="accent" >Save</button>
-<button mat-raised-button color="primary" mat-dialog-close>Close</button>
+  <button mat-raised-button color="accent" (click)="getInput()" >Save</button>
+  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+  </div>
 </div>
+

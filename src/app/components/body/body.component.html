@@ -1,6 +1,6 @@
   <p>
         <mat-toolbar color="primary">
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <button mat-icon-button class="example-icon">
              <mat-icon>grade</mat-icon>
           </button>
           <span class="text-uppercase">My Quotes</span>
@@ -11,11 +11,16 @@
           <button mat-raised-button color="accent" (click)="openDialog()">Add Your Quotes</button>
         </mat-toolbar>
       </p>
+      
+<div class="">
+ <!--<app-form (addQuote)="addedQuote($event)"></app-form>-->
+</div>
+
 
 <!--Quote template-->
 <div class="container box" >
   <div class="row"  > 
-    <div class="col-md-4" *ngFor="let word of words index as i">
+    <div class="col-md-4" *ngFor="let word of words index as index">
 
       <mat-card class="example-card">
         <mat-card-subtitle>Quote</mat-card-subtitle>
@@ -24,20 +29,18 @@
           <p> 
                {{word.content }}
           </p>
-         <p> {{word.author}} </p>
-         <p> {{word.name}} </p>
+         <p>  <span class="fw-bold" id="words">Author:</span> {{word.author}} </p>
+         <p> <span class="fw-bold" id="words">Posted by: </span> {{word.name}} </p>
 
-         <p> {{word.date}} </p>
-         
-         <p> {{numberOfVotes}} </p>
-         <p> {{numberOfDislikes}} </p>
-          
+         <p> <span class="fw-bold" id="words">Posted on:</span>  {{word.date|date}} </p>
+         <p><span class="fw-bold" id="words"> Days elasped: </span> {{word.date|dateCount}} </p>
+        
         </mat-card-content>
         <mat-divider inset></mat-divider>
         <mat-card-actions>
-          <button mat-raised-button matBadge="0" color="primary"(click)="upVoteClick()">UPVOTE</button>
-          <button mat-raised-button matBadge="0" color="primary" (click)="downVoteClick()">DOWNVOTE</button>
-          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <button mat-raised-button matBadge="{{word.upVote}}" color="primary"(click)="upVoteClick(index)">UPVOTE </button>
+          <button mat-raised-button matBadge="{{word.downVote}} " color="primary" (click)="downVoteClick(index)">DOWNVOTE </button>
+          <button mat-fab color="primary" (click)="delete(index)">
             <mat-icon>delete</mat-icon>
           </button>
          
@@ -53,3 +56,4 @@
 
     </div>
   
+<!--(addQuote)="addedQuote($event)"-->
